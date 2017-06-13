@@ -1,0 +1,12 @@
+String workspace = binding.variables['WORKSPACE']
+String mvn = "${workspace}/mvnw"
+String gradle =  "${workspace}/gradlew"
+String date=new Date().format('yyMMdd_HHmm')
+
+def project = new XmlSlurper().parse(new File("$workspace/pom.xml"))
+String param = project.version.toString()
+
+Map envs = [:]
+envs['PIPELINE_VERSION'] = param + "-" + date
+envs['OUTPUT_FOLDER'] = "target"
+return envs
