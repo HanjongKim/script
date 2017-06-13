@@ -1,0 +1,11 @@
+sonar.projectKey=helloworld:hello-spring-cloud
+sonar.projectName=hello-spring-cloud
+sonar.projectDescription="hello-spring-cloud desp"
+sonar.projectVersion=1.0
+sonar.projectBaseDir=./
+sonar.working.directory=./sonar
+sonar.sources=src
+sonar.sourceEncoding=UTF-8
+sonar.junit.reportsPath=target/surefire-reports
+sonar.jacoco.reportPaths=target/jacoco.exec
+sonar.java.binaries=target/classes
